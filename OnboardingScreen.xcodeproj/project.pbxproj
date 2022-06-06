@@ -13,6 +13,11 @@
 		E066D02C284A43B900026142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E066D02A284A43B900026142 /* Main.storyboard */; };
 		E066D02E284A43C400026142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E066D02D284A43C400026142 /* Assets.xcassets */; };
 		E066D031284A43C400026142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E066D02F284A43C400026142 /* LaunchScreen.storyboard */; };
+		E066D03D284A465200026142 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D03C284A465200026142 /* NavigationController.swift */; };
+		E066D040284A47EA00026142 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D03F284A47EA00026142 /* SlideViewController.swift */; };
+		E066D043284A4BC200026142 /* ScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */; };
+		E066D04D284A81A000026142 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D04C284A81A000026142 /* ScreenModel.swift */; };
+		E066D051284A829D00026142 /* SlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D050284A829D00026142 /* SlideViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		E066D02D284A43C400026142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E066D030284A43C400026142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E066D032284A43C400026142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E066D03C284A465200026142 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		E066D03F284A47EA00026142 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		E066D04C284A81A000026142 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
+		E066D050284A829D00026142 /* SlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		E066D023284A43B900026142 /* OnboardingScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E066D03A284A45D000026142 /* Model */,
+				E066D039284A45BF00026142 /* Common */,
+				E066D038284A44F300026142 /* Presentation */,
 				E066D024284A43B900026142 /* AppDelegate.swift */,
 				E066D026284A43B900026142 /* SceneDelegate.swift */,
 				E066D028284A43B900026142 /* ViewController.swift */,
@@ -65,6 +78,80 @@
 				E066D032284A43C400026142 /* Info.plist */,
 			);
 			path = OnboardingScreen;
+			sourceTree = "<group>";
+		};
+		E066D038284A44F300026142 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E066D03E284A47CE00026142 /* Slide */,
+				E066D03B284A462D00026142 /* Navigation */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E066D039284A45BF00026142 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E066D03A284A45D000026142 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E066D03B284A462D00026142 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E066D03C284A465200026142 /* NavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E066D03E284A47CE00026142 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				E066D04E284A827D00026142 /* ViewModel */,
+				E066D04B284A818C00026142 /* Model */,
+				E066D052284A82A600026142 /* View */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
+		E066D047284A53E400026142 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E066D04B284A818C00026142 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E066D04C284A81A000026142 /* ScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E066D04E284A827D00026142 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E066D050284A829D00026142 /* SlideViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E066D052284A82A600026142 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E066D047284A53E400026142 /* Cell */,
+				E066D03F284A47EA00026142 /* SlideViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E066D040284A47EA00026142 /* SlideViewController.swift in Sources */,
+				E066D04D284A81A000026142 /* ScreenModel.swift in Sources */,
 				E066D029284A43B900026142 /* ViewController.swift in Sources */,
+				E066D043284A4BC200026142 /* ScreenCollectionViewCell.swift in Sources */,
+				E066D051284A829D00026142 /* SlideViewModel.swift in Sources */,
+				E066D03D284A465200026142 /* NavigationController.swift in Sources */,
 				E066D025284A43B900026142 /* AppDelegate.swift in Sources */,
 				E066D027284A43B900026142 /* SceneDelegate.swift in Sources */,
 			);
