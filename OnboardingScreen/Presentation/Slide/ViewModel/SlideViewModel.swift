@@ -47,7 +47,7 @@ class SlideViewModel {
         let subTitle = "Save your favorite recipes and get reminders to buy the ingredients to cook them."
         let image = UIImage(named: "favorites")!
         
-        let screen = SlideScreen1()
+        let screen = SlideScreen2()
         screen.configView(backgroudColor: UIColor(red: 0.13, green: 0.65, blue: 0.53, alpha: 1.00), title: title, subTitle: subTitle, image: image)
         return screen
     }

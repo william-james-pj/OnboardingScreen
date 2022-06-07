@@ -18,6 +18,7 @@
 		E066D043284A4BC200026142 /* ScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */; };
 		E066D04D284A81A000026142 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D04C284A81A000026142 /* ScreenModel.swift */; };
 		E066D051284A829D00026142 /* SlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D050284A829D00026142 /* SlideViewModel.swift */; };
+		E0DCC000284F8E4000DD5B00 /* SlideScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCBFFF284F8E4000DD5B00 /* SlideScreen2.swift */; };
 		E0FA4FC4284E3FFE00A37E30 /* SlideScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FA4FC3284E3FFE00A37E30 /* SlideScreen1.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		E066D04C284A81A000026142 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		E066D050284A829D00026142 /* SlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewModel.swift; sourceTree = "<group>"; };
+		E0DCBFFF284F8E4000DD5B00 /* SlideScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideScreen2.swift; sourceTree = "<group>"; };
 		E0FA4FC3284E3FFE00A37E30 /* SlideScreen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideScreen1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,8 +70,6 @@
 		E066D023284A43B900026142 /* OnboardingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E066D03A284A45D000026142 /* Model */,
-				E066D039284A45BF00026142 /* Common */,
 				E066D038284A44F300026142 /* Presentation */,
 				E066D024284A43B900026142 /* AppDelegate.swift */,
 				E066D026284A43B900026142 /* SceneDelegate.swift */,
@@ -90,20 +90,6 @@
 				E066D03B284A462D00026142 /* Navigation */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		E066D039284A45BF00026142 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		E066D03A284A45D000026142 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E066D03B284A462D00026142 /* Navigation */ = {
@@ -161,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E0FA4FC3284E3FFE00A37E30 /* SlideScreen1.swift */,
+				E0DCBFFF284F8E4000DD5B00 /* SlideScreen2.swift */,
 			);
 			path = SlideScreen;
 			sourceTree = "<group>";
@@ -238,6 +225,7 @@
 			files = (
 				E066D040284A47EA00026142 /* SlideViewController.swift in Sources */,
 				E066D04D284A81A000026142 /* ScreenModel.swift in Sources */,
+				E0DCC000284F8E4000DD5B00 /* SlideScreen2.swift in Sources */,
 				E066D029284A43B900026142 /* ViewController.swift in Sources */,
 				E066D043284A4BC200026142 /* ScreenCollectionViewCell.swift in Sources */,
 				E0FA4FC4284E3FFE00A37E30 /* SlideScreen1.swift in Sources */,

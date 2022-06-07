@@ -68,7 +68,6 @@ class SlideViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(handleButtonNext), for: .touchUpInside)
-        button.tag = 1
         return button
     }()
     
@@ -79,7 +78,6 @@ class SlideViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(handleButtonSkip), for: .touchUpInside)
-        button.tag = 1
         return button
     }()
     
@@ -210,6 +208,7 @@ class SlideViewController: UIViewController {
             buttonSkip.heightAnchor.constraint(equalToConstant: 48),
             buttonSkip.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             buttonSkip.topAnchor.constraint(equalTo: view.topAnchor, constant: 32),
+            
         ])
     }
 }

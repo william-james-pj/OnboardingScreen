@@ -1,13 +1,13 @@
 //
-//  SlideScreen1.swift
+//  SlideScreen2.swift
 //  OnboardingScreen
 //
-//  Created by Pinto Junior, William James on 06/06/22.
+//  Created by Pinto Junior, William James on 07/06/22.
 //
 
 import UIKit
 
-class SlideScreen1: UIView {
+class SlideScreen2: UIView {
     // MARK: - Components
     fileprivate let stackBase: UIStackView = {
         let stack = UIStackView()
@@ -59,6 +59,24 @@ class SlideScreen1: UIView {
         return label
     }()
     
+    fileprivate let viewImageAux: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    fileprivate lazy var buttonStart: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Get started", for: .normal)
+        button.setTitleColor(UIColor.darkText, for: .normal)
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 16
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,7 +110,11 @@ class SlideScreen1: UIView {
         stackText.addArrangedSubview(labelTitle)
         stackText.addArrangedSubview(labelSubTitle)
         
+        stackText.addArrangedSubview(viewImageAux)
+        viewImageAux.addSubview(buttonStart)
+        
         stackBase.addArrangedSubview(viewStackAux)
+        
     }
     
     fileprivate func buildConstraints() {
@@ -103,6 +125,15 @@ class SlideScreen1: UIView {
             stackBase.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             imageViewPrimary.heightAnchor.constraint(equalToConstant: 150),
+            
+            viewImageAux.heightAnchor.constraint(equalToConstant: 50),
+            
+            buttonStart.widthAnchor.constraint(equalToConstant: 120),
+            buttonStart.topAnchor.constraint(equalTo: viewImageAux.topAnchor),
+            buttonStart.bottomAnchor.constraint(equalTo: viewImageAux.bottomAnchor),
+            buttonStart.centerXAnchor.constraint(equalTo: viewImageAux.centerXAnchor),
+        
         ])
     }
 }
+
