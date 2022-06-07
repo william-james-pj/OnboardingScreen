@@ -12,7 +12,7 @@ class ScreenCollectionViewCell: UICollectionViewCell {
     fileprivate let stackBase: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 16
+        stack.spacing = 0
         stack.distribution = .fill
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
@@ -35,8 +35,8 @@ class ScreenCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Methods
-    func settingCell(_ screen: ScreenModel) {
-        self.backgroundColor = screen.backgroudColor
+    func settingCell(_ screen: UIView) {
+        stackBase.addArrangedSubview(screen)
     }
     
     fileprivate func buildHierarchy() {

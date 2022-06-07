@@ -18,6 +18,7 @@
 		E066D043284A4BC200026142 /* ScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */; };
 		E066D04D284A81A000026142 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D04C284A81A000026142 /* ScreenModel.swift */; };
 		E066D051284A829D00026142 /* SlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E066D050284A829D00026142 /* SlideViewModel.swift */; };
+		E0FA4FC4284E3FFE00A37E30 /* SlideScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FA4FC3284E3FFE00A37E30 /* SlideScreen1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E066D042284A4BC200026142 /* ScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		E066D04C284A81A000026142 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		E066D050284A829D00026142 /* SlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewModel.swift; sourceTree = "<group>"; };
+		E0FA4FC3284E3FFE00A37E30 /* SlideScreen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideScreen1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E066D03E284A47CE00026142 /* Slide */,
+				E0FA4FC2284E3FC500A37E30 /* SlideScreen */,
 				E066D03B284A462D00026142 /* Navigation */,
 			);
 			path = Presentation;
@@ -152,6 +155,14 @@
 				E066D03F284A47EA00026142 /* SlideViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E0FA4FC2284E3FC500A37E30 /* SlideScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E0FA4FC3284E3FFE00A37E30 /* SlideScreen1.swift */,
+			);
+			path = SlideScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				E066D04D284A81A000026142 /* ScreenModel.swift in Sources */,
 				E066D029284A43B900026142 /* ViewController.swift in Sources */,
 				E066D043284A4BC200026142 /* ScreenCollectionViewCell.swift in Sources */,
+				E0FA4FC4284E3FFE00A37E30 /* SlideScreen1.swift in Sources */,
 				E066D051284A829D00026142 /* SlideViewModel.swift in Sources */,
 				E066D03D284A465200026142 /* NavigationController.swift in Sources */,
 				E066D025284A43B900026142 /* AppDelegate.swift in Sources */,

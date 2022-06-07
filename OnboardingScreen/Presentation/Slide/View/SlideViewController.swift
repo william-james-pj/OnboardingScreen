@@ -15,7 +15,7 @@ class SlideViewController: UIViewController {
     fileprivate var viewModel: SlideViewModel = {
         return SlideViewModel()
     }()
-    fileprivate var allScreen: [ScreenModel] = []
+    fileprivate var allScreen: [UIView] = []
     
     // MARK: - Components
     fileprivate let stackBase: UIStackView = {
@@ -56,7 +56,7 @@ class SlideViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(handleButtonPage), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleButtonPrev), for: .touchUpInside)
         button.tag = 0
         return button
     }()
@@ -67,7 +67,7 @@ class SlideViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(handleButtonPage), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleButtonNext), for: .touchUpInside)
         button.tag = 1
         return button
     }()
@@ -78,7 +78,7 @@ class SlideViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(handleButtonPage), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleButtonSkip), for: .touchUpInside)
         button.tag = 1
         return button
     }()
@@ -100,27 +100,39 @@ class SlideViewController: UIViewController {
     }
     
     // MARK: - Action
-    @objc func handleButtonPage(button: UIButton) {
-        var indexPath: IndexPath!
+    @objc func handleButtonPrev(button: UIButton) {
         var current = pageControlScreen.currentPage
         
-        if button == buttonPrev {
-            if current - 1 >= 0 {
-                current -= 1
-                setButtonsByPosition(current)
-            }
-        } else if button == buttonNext {
-            if current + 1 < self.allScreen.count {
-                current += 1
-                setButtonsByPosition(current)
-            }
-        } else {
-            current = self.allScreen.count
-            setButtonsByPosition(current)
+        if current - 1 < 0 {
+            return
         }
         
-        indexPath = IndexPath(item: current, section: 0)
-        self.collectionViewScreen.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        current -= 1
+        setButtonsByPosition(current)
+
+        collectionNavigation(current: current, animated: false)
+    }
+    
+    @objc func handleButtonNext(button: UIButton) {
+        var current = pageControlScreen.currentPage
+        
+        if current + 1 > self.allScreen.count {
+            return
+        }
+        
+        current += 1
+        setButtonsByPosition(current)
+        
+        collectionNavigation(current: current, animated: false)
+    }
+    
+    @objc func handleButtonSkip(button: UIButton) {
+        var current = pageControlScreen.currentPage
+        
+        current = self.allScreen.count - 1
+        setButtonsByPosition(current)
+        
+        collectionNavigation(current: current, animated: false)
     }
 
     // MARK: - Setup
@@ -160,6 +172,11 @@ class SlideViewController: UIViewController {
             self.buttonPrev.isHidden = false
             self.buttonSkip.isHidden = false
         }
+    }
+    
+    fileprivate func collectionNavigation(current: Int, animated: Bool) {
+        let indexPath = IndexPath(item: current, section: 0)
+        self.collectionViewScreen.selectItem(at: indexPath, animated: animated, scrollPosition: .centeredHorizontally)
     }
     
     fileprivate func buildHierarchy() {
