@@ -97,7 +97,7 @@ class SlideScreen1: UIView {
     
     fileprivate func buildConstraints() {
         NSLayoutConstraint.activate([
-            stackBase.topAnchor.constraint(equalTo: self.topAnchor, constant: 48),
+            stackBase.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 56),
             stackBase.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32),
             stackBase.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             stackBase.bottomAnchor.constraint(equalTo: self.bottomAnchor),

@@ -150,6 +150,7 @@ class SlideViewController: UIViewController {
         collectionViewScreen.dataSource = self
         collectionViewScreen.delegate = self
         collectionViewScreen.bounces = false
+        collectionViewScreen.contentInsetAdjustmentBehavior = .never
         
         collectionViewScreen.register(ScreenCollectionViewCell.self, forCellWithReuseIdentifier: resuseIdentifierScreen)
     }
@@ -189,7 +190,7 @@ class SlideViewController: UIViewController {
     
     fileprivate func buildConstraints() {
         NSLayoutConstraint.activate([
-            stackBase.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackBase.topAnchor.constraint(equalTo: view.topAnchor),
             stackBase.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stackBase.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             stackBase.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -199,15 +200,15 @@ class SlideViewController: UIViewController {
             
             buttonPrev.heightAnchor.constraint(equalToConstant: 48),
             buttonPrev.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            buttonPrev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            buttonPrev.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32),
             
             buttonNext.heightAnchor.constraint(equalToConstant: 48),
             buttonNext.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            buttonNext.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            buttonNext.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32),
             
             buttonSkip.heightAnchor.constraint(equalToConstant: 48),
             buttonSkip.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            buttonSkip.topAnchor.constraint(equalTo: view.topAnchor, constant: 32),
+            buttonSkip.topAnchor.constraint(equalTo: view.topAnchor, constant: 48),
             
         ])
     }
